@@ -137,7 +137,7 @@ void Render() {
         && currentState !is null
         && currentState.currentAk != AK::AK5;
     if (S_Preview || shouldShowAK) {
-        auto pos = vec2(Draw::GetWidth(), Draw::GetHeight()) * vec2(S_ScreenPosX, S_ScreenPosY);
+        auto pos = Display::GetSize() * vec2(S_ScreenPosX, S_ScreenPosY);
         nvgCircleScreenPos(pos, GetAkBgColor(currentState.currentAk), S_SizeRadius);
         nvg::TextAlign(nvg::Align::Center | nvg::Align::Middle);
         nvg::FontSize(S_SizeRadius * 1.4);
